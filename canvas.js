@@ -45,12 +45,6 @@ trafficbal = [
     "auto/bal/jarmu9.png",
     "auto/bal/jarmu10.png",
 ]
-vizeses = [
-    "kut/kut1.png",
-    "kut/kut2.png",
-    "kut/kut3.png",
-    "kut/kut4.png"
-]
 
 //meghatározom a canvas nagyságát 720p és 900p között és ezzel arányosan a többi test méretét is
 if (window.innerHeight > 900) {
@@ -112,7 +106,6 @@ function startGame() {
     myGamePiece = new component(myGamePieceW, myGamePieceH, "kukasauto.gif", myCanvasWidth/2, myCanvasHeight/2, "kukasauto");
     SATArray.push(myTarget = new component(15, 20, "kukapixel2.png", myTargetX, myTargetY,"kuka"));
     myScore = new component("30px", "Consolas", "black", 5, 30, "text");
-    // myTeszt = new component(64,64,"kut/kut1.png",75,75,"kut");
     SATArray.push(myBlock = new component(myBlockW,myBlockH,"blocks/block8.png",0,0, "teszt"));
     SATArray.push(myBlock2 = new component(myBlockW,myBlockH,"blocks/block1.png",0,myBlockH+myRoadWidth, "teszt"));
     SATArray.push(myBlock3 = new component(myBlockW,myBlockH,"blocks/block6.png",0,(myBlockH+myRoadWidth)*2, "teszt"));
@@ -301,18 +294,6 @@ function updateGameArea() {
                 }
             }
         }
-        // if ((myGamePiece.x > myCanvasWidth) || (myGamePiece.x < 0) || (myGamePiece.y > myCanvasHeight) || (myGamePiece.y < 0)) {
-        //     ctx.fillStyle = 'rgba(200,200,200,0.5)';
-        //     ctx.fillRect(0,0,myCanvasWidth,myCanvasHeight);
-        //     myGameOver = new component("150px", "Consolas", "black", myCanvasWidth/2-450, myCanvasHeight/2+40, "text");
-        //     myGameOver.text = "Játék vége!";
-        //     myGameRestart = new component("30px", "Consolas", "black", myCanvasWidth/2-350, myCanvasHeight/2+150, "text");
-        //     myGameRestart.text = "Nyomj le egy billentyűt az újraindításhoz!";
-        //     kapta = 1;
-        //     myGameOver.update();
-        //     myGameRestart.update();
-        //     myGameArea.stop();
-        // }
         if (myGamePiece.x < 0) {
             myGamePiece.x = myCanvasWidth-1;
         } else if (myGamePiece.x > myCanvasWidth) {
